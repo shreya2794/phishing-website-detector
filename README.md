@@ -64,8 +64,9 @@ Upload a CSV file of URLs and get their classification results instantly.
 **Contributors:-**
 (1)Name: Shreya Dandale
 GitHub: https://github.com/shreya2794
+
 (2)Name: Harshada Raut
-GitHub: https://github.com/harshadaraut
+GitHub: https://github.com/Harshada-77
 
 
 
