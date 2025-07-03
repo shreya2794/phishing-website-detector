@@ -1,26 +1,29 @@
 # 🛡️ Phishing Website Detection using Machine Learning
 
-Detect and classify websites as either legitimate or phishing using machine learning. This project leverages a Random Forest model trained on engineered features from malicious and benign URLs. Includes an interactive Streamlit web dashboard for single and bulk URL analysis.
+Detect and classify websites as either **legitimate or phishing** using Machine Learning.  
+This project uses a **Random Forest model** trained on a CSV dataset of malicious and benign URLs with engineered features.  
+A **Streamlit dashboard** supports bulk classification by uploading test data in the same format.
 
 ---
 
 ## 🚀 Key Features
 
-### 🧪 URL-Based Phishing Detection
-- Detects threats using only features extracted from URLs — no external content scraping.
-- Supports detection of common attacks like:
-  - SQL Injection (SQLi)
-  - Cross-Site Scripting (XSS)
+### 🧪 CSV-Based Phishing Detection
+- Detects phishing threats using **pre-engineered features** from URLs
+- ❌ No live URL pasting or web scraping
 
-### ⚡ Real-time & Bulk Prediction
-- 🔍 Paste a single URL to check its safety
-- 📁 Upload a CSV file to classify URLs in bulk
+### ⚡ Bulk Prediction via CSV Upload
+- 📁 Upload a CSV containing extracted features
+- ✅ Get predictions with confidence scores
+- 🧪 Ideal for offline testing and demonstrations
 
 ### 🧠 ML Model
-- Random Forest Classifier with 96%+ accuracy
-- Trained on labeled phishing/legitimate URLs
+- **Random Forest Classifier** with over **96% accuracy**
+- Trained on a **Kaggle phishing dataset**
+- Supports **probability-based** scoring
 
 ---
+
 
 ## 🗂️ Project Structure
 
@@ -36,8 +39,6 @@ Phishing-Website-Detection/
 │   └── phishing_data.csv   # Dataset file
 └── README.md               # Project documentation
 ````
-
----
 
 ## ⚙️ Setup & Installation
 
@@ -79,24 +80,30 @@ streamlit run app.py
 * Modify or extend the dataset inside `/data/phishing_data.csv`
 
 ---
-
 ## 🧠 Features Used
+URL length
 
-* Length of URL
-* Number of special characters
-* Presence of suspicious tokens (e.g., script, select, alert)
-* Entropy of query string
-* Token pattern frequency
-* Number of subdomains
+Number of special characters
+
+Suspicious tokens (e.g., script, alert)
+
+Query string entropy
+
+Subdomain count
+
+Pattern frequencies
+
+> ⚠️ **Note:** Uploaded test CSVs **must match the training feature columns** exactly.
 
 ---
 
-## 🌐 Web App Interface
+## 🌐 Streamlit App Interface
 
-| Mode          | Description                                         |
-| ------------- | --------------------------------------------------- |
-| 🔗 Single URL | Paste a URL and instantly view prediction & score   |
-| 📄 CSV Upload | Upload CSV with URLs and get bulk prediction output |
+| Mode         | Description                                                               |
+|--------------|---------------------------------------------------------------------------|
+| 📄 CSV Upload | Upload a CSV file with extracted features to classify multiple entries   |
+
+> ❌ This version does **not support raw URL input or scraping**
 
 ---
 
@@ -109,18 +116,10 @@ streamlit run app.py
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
 ## 🚧 Future Enhancements
 
-* 🌐 Real-time URL scraping & analysis
-* 📈 Feature importance visualization
-* 🤖 Deep learning (LSTM/CNN) phishing detectors
-* ☁️ Deploy via Streamlit Cloud or HuggingFace Spaces
-
----
+- 🌐 Raw URL input with automatic feature extraction  
+- 📈 Feature importance visualization  
+- 🤖 Deep learning models (LSTM/CNN)  
+- ☁️ Deploy on Streamlit Cloud / HuggingFace Spaces
 
