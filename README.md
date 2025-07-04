@@ -6,8 +6,10 @@ A **Streamlit dashboard** supports bulk classification by uploading test data in
 
 ---
 
+## Key Features
 ##  Key Features
 
+### CSV-Based Phishing Detection
 ###  CSV-Based Phishing Detection
 - Detects phishing threats using **pre-engineered features** from URLs
 
@@ -15,7 +17,12 @@ A **Streamlit dashboard** supports bulk classification by uploading test data in
 -  Upload a CSV containing extracted features
 -  Get predictions with confidence scores
 -  Ideal for offline testing and demonstrations
+### Bulk Prediction via CSV Upload
+-  Upload a CSV containing extracted features
+-  Get predictions with confidence scores
+-  Ideal for offline testing and demonstrations
 
+### ML Model
 ### ML Model
 - **Random Forest Classifier** with over **96% accuracy**
 - Trained on a **Kaggle phishing dataset**
@@ -24,12 +31,14 @@ A **Streamlit dashboard** supports bulk classification by uploading test data in
 ---
 
 
+## Project Structure
 ##  Project Structure
 
 ```bash
 Phishing-Website-Detection/
 ├── app.py                  # Streamlit frontend
 ├── train.py                # Model training script
+├── generate_test_csv.py    # Test data CSV generator
 ├── generate_test_csv.py    # Testing file CSV generator
 ├── requirements.txt        # Dependencies list
 ├── model/
@@ -37,9 +46,13 @@ Phishing-Website-Detection/
 ├── data/
 │   └── phishing_data.csv   # Dataset file
     └── test_data.csv       # Testing file
+    └── test_data.csv       # Testing file
 └── README.md               # Project documentation
+└── .gitignore
+
 ````
 
+## Setup & Installation
 ##  Setup & Installation
 
 1. Clone the repo:
@@ -70,6 +83,7 @@ streamlit run app.py
 ---
 
 ## Dataset
+## Dataset
 
 * Format: `CSV` file with columns `URL`, `Label`
 * Labels: `0 = Legitimate`, `1 = Phishing`
@@ -80,6 +94,7 @@ streamlit run app.py
 * Modify or extend the dataset inside `/data/phishing_data.csv`
 
 ---
+## Features Used
 ## Features Used
 URL length
 
@@ -94,9 +109,11 @@ Subdomain count
 Pattern frequencies
 
 >  **Note:** Uploaded test CSVs **must match the training feature columns** exactly.
+>  **Note:** Uploaded test CSVs **must match the training feature columns** exactly.
 
 ---
 
+## Streamlit App Interface
 ## Streamlit App Interface
 
 | Mode         | Description                                                               |
@@ -106,6 +123,7 @@ Pattern frequencies
 
 ---
 
+##  Contributors
 ## Contributors
 
 | Name           | GitHub Username                                  | 
@@ -116,7 +134,12 @@ Pattern frequencies
 ---
 
 ## Future Enhancements
+## Future Enhancements
 
+-  Raw URL input with automatic feature extraction  
+-  Feature importance visualization  
+-  Deep learning models (LSTM/CNN)  
+-  Deploy on Streamlit Cloud / HuggingFace Spaces
 -  Raw URL input with automatic feature extraction  
 -  Feature importance visualization  
 -  Deep learning models (LSTM/CNN)  
