@@ -38,6 +38,7 @@ Phishing-Website-Detection/
 │   └── phishing_data.csv   # Dataset file
     └── test_data.csv       # Testing file
 └── README.md               # Project documentation
+└── Phishing Website Detection using Machine Learning.docx
 ````
 
 ##  Setup & Installation
