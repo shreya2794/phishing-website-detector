@@ -77,7 +77,7 @@ streamlit run app.py
 
   * SQLi & XSS payloads
   * Random, obfuscated phishing URLs
-* Modify or extend the dataset inside `/data/phishing_data.csv`
+* Modify or extend the dataset inside `/data/test_data.csv`
 
 ---
 ## Features Used
