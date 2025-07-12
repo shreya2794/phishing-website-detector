@@ -3,8 +3,13 @@
 Detect and classify websites as either **legitimate or phishing** using Machine Learning.  
 This project uses a **Random Forest model** trained on a CSV dataset of malicious and benign URLs with engineered features.  
 A **Streamlit dashboard** supports bulk classification by uploading test data in the same format.
-
 ---
+## Video Explanation
+[![Watch Video](https://img.shields.io/badge/Watch-Video-blue?logo=google-drive)](https://drive.google.com/file/d/1GRXQw_XSJXA0tmamZOoTNa4QfDQZYbRL/view?usp=drive_link)
+
+
+
+
 
 ##  Key Features
 
